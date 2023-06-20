@@ -1,4 +1,4 @@
-From 433b2bfdf31b211b9f233b3ce79475cc86c566d9 Mon Sep 17 00:00:00 2001
+From 005edbcf19021c3ac280af0c156877e6e10e955a Mon Sep 17 00:00:00 2001
 From: Shane Loretz <shane.loretz@gmail.com>
 Date: Mon, 21 Mar 2022 14:16:31 -0700
 Subject: [PATCH 2/2] Set APPEND_PROJECT_NAME_TO_INCLUDEDIR to ON
@@ -8,7 +8,7 @@ Subject: [PATCH 2/2] Set APPEND_PROJECT_NAME_TO_INCLUDEDIR to ON
  1 file changed, 1 insertion(+)
 
 diff --git a/rpm/template.spec.em b/rpm/template.spec.em
-index adfa6050..bfa61d45 100644
+index adfa60508293..bfa61d45978a 100644
 --- a/rpm/template.spec.em
 +++ b/rpm/template.spec.em
 @@ -53,6 +53,7 @@ mkdir -p .obj-%{_target_platform} && cd .obj-%{_target_platform}
@@ -20,5 +20,5 @@ index adfa6050..bfa61d45 100644
  
  %make_build
 -- 
-2.34.1
+2.40.1
 
