@@ -1,0 +1,62 @@
+From 27dec187c2399d7cee8030614eb9f3a6e587180f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jos=C3=A9=20Luis=20Bueno=20L=C3=B3pez?=
+ <69244257+JLBuenoLopez-eProsima@users.noreply.github.com>
+Date: Thu, 11 May 2023 08:03:23 +0200
+Subject: [PATCH] Fix missing includes (#3508)
+
+* Refs #18431: fix missing includes
+
+Signed-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>
+
+* Refs #18431: linters
+
+Signed-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>
+
+---------
+
+Signed-off-by: JLBuenoLopez-eProsima <joseluisbueno@eprosima.com>
+---
+ include/fastdds/rtps/transport/TransportDescriptorInterface.h | 4 +---
+ include/fastrtps/types/TypeNamesGenerator.h                   | 2 ++
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/include/fastdds/rtps/transport/TransportDescriptorInterface.h b/include/fastdds/rtps/transport/TransportDescriptorInterface.h
+index 149707736bc5..232f15aa722f 100644
+--- a/include/fastdds/rtps/transport/TransportDescriptorInterface.h
++++ b/include/fastdds/rtps/transport/TransportDescriptorInterface.h
+@@ -17,11 +17,9 @@
+ 
+ #include <fastrtps/fastrtps_dll.h>
+ 
+-#ifdef _WIN32
+ #include <cstdint>
+-#endif // ifdef _WIN32
+-#include <vector>
+ #include <string>
++#include <vector>
+ 
+ namespace eprosima {
+ namespace fastdds {
+diff --git a/include/fastrtps/types/TypeNamesGenerator.h b/include/fastrtps/types/TypeNamesGenerator.h
+index a8f45e013c99..eeb3d195da91 100644
+--- a/include/fastrtps/types/TypeNamesGenerator.h
++++ b/include/fastrtps/types/TypeNamesGenerator.h
+@@ -3,6 +3,7 @@
+ 
+ #include <fastrtps/fastrtps_dll.h>
+ 
++#include <cstdint>
+ #include <string>
+ #include <vector>
+ 
+@@ -13,6 +14,7 @@ namespace types {
+ class TypeNamesGenerator
+ {
+ public:
++
+     RTPS_DllAPI static std::string get_string_type_name(
+             uint32_t bound,
+             bool wide,
+-- 
+2.41.0
+
